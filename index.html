@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="book__card">
+    <dialog>
       <form class="book__form" id="form">
         <label for="title">Title: </label>
-        <input type="text" name="title" id="title" />
+        <input autofocus type="text" name="title" id="title" />
 
         <label for="author">Author: </label>
         <input type="text" name="author" id="author" />
@@ -21,9 +21,14 @@
         <label for="read">Read: </label>
         <input type="text" name="read" id="read" />
 
-        <button type="submit">Submit</button>
+        <button formmethod="dialog" id="submit-button" type="submit">
+          Submit
+        </button>
+        <button id="cancel-button">Cancel</button>
       </form>
-    </div>
+    </dialog>
+    <button id="show-dialog">+ Add book</button>
+    <div class="book__cards" id="book-list"></div>
   </body>
   <script src="script.js"></script>
 </html>
