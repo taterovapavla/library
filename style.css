@@ -1,0 +1,66 @@
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+header {
+  background-color: white;
+  width: 100vw;
+  margin: 0;
+  position: sticky;
+}
+
+body {
+  background-color: rgb(235, 230, 230);
+  margin: 0;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+#show-dialog {
+  background-color: white;
+  margin: 3rem 0rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.book__cards {
+  margin: auto;
+  width: 75%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.book__card {
+  width: auto;
+  background-color: white;
+  border: 0.1rem solid silver;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.remove__button, .toggle__button {
+  width: 10rem;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.toggle__button--red {
+  background-color: rgb(220, 30, 78);
+}
+
+.toggle__button--green {
+  background-color: rgb(94, 248, 102);
+}

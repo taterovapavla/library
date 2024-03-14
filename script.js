@@ -53,32 +53,59 @@ cancelButtonElement.addEventListener("click", (e) => {
 
 function createCard(bookListElement) {
   const bookCard = document.createElement("div");
-  const bookDescription = document.createElement("p");
-
+  const bookTitle = document.createElement("p");
+  const bookAuthor = document.createElement("p");
+  const bookPages = document.createElement("p");
+  const bookRead = document.createElement("p");
   const removeBookButton = document.createElement("button");
-  removeBookButton.classList.add("remove__button");
-
   const toggleReadButton = document.createElement("button");
-  toggleReadButton.classList.add("toggle__button");
 
   bookCard.classList.add("book__card");
-  bookCard.append(bookDescription, removeBookButton, toggleReadButton);
+  bookTitle.classList.add("book__title");
+  bookAuthor.classList.add("book__author");
+  bookPages.classList.add("book__pages");
+  bookRead.classList.add("book__read");
+  removeBookButton.classList.add("remove__button");
+  toggleReadButton.classList.add("toggle__button");
+
+  bookCard.append(
+    bookAuthor,
+    bookTitle,
+    bookPages,
+    bookRead,
+    removeBookButton,
+    toggleReadButton
+  );
+
+  console.log(bookCard.childNodes);
+
   bookListElement.append(bookCard);
   return bookCard;
 }
 
 function renderCard(bookCard, book) {
-  const bookDescription = bookCard.querySelector("p");
-  bookDescription.textContent = `Title: ${book.title} Author: ${book.author} Pages: ${book.pages} Read: ${book.read}`;
+  const bookTitle = bookCard.querySelector(".book__title");
+  const bookAuthor = bookCard.querySelector(".book__title");
+  const bookPages = bookCard.querySelector(".book__pages");
+  const bookRead = bookCard.querySelector(".book__read");
   const removeBookButton = bookCard.querySelector(".remove__button");
-  removeBookButton.textContent = "Remove";
   const toggleReadButton = bookCard.querySelector(".toggle__button");
+
+  bookTitle.textContent = `Title: ${book.title}`;
+  bookAuthor.textContent = `Author: ${book.author}`;
+  bookPages.textContent = `Pages: ${book.pages}`;
+  bookRead.textContent = `Read: ${book.read}`;
+  removeBookButton.textContent = "Remove";
   toggleReadButton.textContent = "Read";
 
   if (book.read === true) {
-    toggleReadButton.textContent = "Unread";
-  } else {
     toggleReadButton.textContent = "Read";
+    toggleReadButton.classList.add("toggle__button--green");
+    toggleReadButton.classList.remove("toggle__button--red");
+  } else {
+    toggleReadButton.textContent = "Unread";
+    toggleReadButton.classList.add("toggle__button--red");
+    toggleReadButton.classList.remove("toggle__button--green");
   }
 }
 
