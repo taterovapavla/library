@@ -17,17 +17,29 @@
       <h1 class="title">My library</h1>
     </header>
     <dialog>
+      <h2>Add new book</h2>
       <form class="book__form" id="form">
-        <label for="title">Title: </label>
-        <input autofocus type="text" name="title" id="title" />
+        <label for="title"></label>
+        <input
+          autofocus
+          type="text"
+          name="title"
+          id="title"
+          placeholder="Title"
+        />
 
-        <label for="author">Author: </label>
-        <input type="text" name="author" id="author" />
+        <label for="author"></label>
+        <input type="text" name="author" id="author" placeholder="Author" />
 
-        <label for="pages">Number of pages: </label>
-        <input type="text" name="pages" id="pages" />
+        <label for="pages"></label>
+        <input
+          type="text"
+          name="pages"
+          id="pages"
+          placeholder="Number of pages"
+        />
 
-        <label for="read">Read: </label>
+        <label for="read">I have read it </label>
         <input type="checkbox" name="read" id="read" checked />
 
         <button formmethod="dialog" id="submit-button" type="submit">
