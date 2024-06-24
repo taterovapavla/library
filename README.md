@@ -8,7 +8,6 @@ You can try the application [here](https://taterovapavla.github.io/library/).
 ## Features
 - Add new books to the library
 - Display a list of books in the library
-- Edit book information
 - Delete books from the library
 - Mark books as read or unread
 
